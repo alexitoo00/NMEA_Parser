@@ -19,17 +19,17 @@ En este caso nuestro módulo gps está conectado en los pines 32 y 33, por lo qu
 
 - **begin()**
   En el ```void setup()``` de nuestro script de Arduino debemos dar la orden de recibir los datos a nuestro dispositivo GPS mediante la función ```begin()``` junto con la tasa de baudios a la que deseamos recibir los mensajes de nuestro módulo:
-```C++
-  gps.begin(9600);
-```
+  ```C++
+    gps.begin(9600);
+  ```
 
 - **serialRead()**
   Cuando necesitemos leer los datos del GPS debemos indicarlo con la función ```serialRead()```. Esta función devuelve un valor booleano de __true__ si es capaz de encontrar los datos de latitud y longitud y un valor de __false__ si no los encuentra, lo que la hace muy útil para evaluar esta situación en una declaración if como se muestra en el ejemplo:
-```C++
-  if (gps.serialRead()){ // Si se encuentra señal GPS
-    // Ejecuta el código de aquí
-  }
-```
+  ```C++
+    if (gps.serialRead()){ // Si se encuentra señal GPS
+      // Ejecuta el código de aquí
+    }
+  ```
 
 - **Parse(String datosNMEA)**
   Si lo deseamos también podemos interpretar los datos en formato NMEA pasandole a la función ```Parse()``` una cadena de caracteres como parámetro:
@@ -40,9 +40,9 @@ En este caso nuestro módulo gps está conectado en los pines 32 y 33, por lo qu
  
 - **lat**
   Variable que devuelve el valor de tipo float correspondiente a la latitud
-```C++
-  float latitud = gps.lat;
-```
+  ```C++
+    float latitud = gps.lat;
+  ```
   
 - **lon**
   Variable que devuelve el valor de tipo float correspondiente a la longitud
@@ -52,13 +52,13 @@ En este caso nuestro módulo gps está conectado en los pines 32 y 33, por lo qu
   
 - **hora**
   Variable que devuelve el valor de tipo String correspondiente a la hora en formato HH:MM:SS
-```C++
-  String horaGPS = gps.hora;
-```  
+  ```C++
+    String horaGPS = gps.hora;
+  ```  
   
 - fecha
   Variable que devuelve el valor de tipo String correspondiente a la fecha en formato DD/MM/AA
-```C++
-  String fechaGPS = gps.fecha;
-```  
+  ```C++
+    String fechaGPS = gps.fecha;
+  ```  
   
