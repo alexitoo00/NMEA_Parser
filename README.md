@@ -33,10 +33,10 @@ En este caso nuestro módulo gps está conectado en los pines 32 y 33, por lo qu
 
 - **Parse(String datosNMEA)**
   Si lo deseamos también podemos interpretar los datos en formato NMEA pasandole a la función ```Parse()``` una cadena de caracteres como parámetro:
- ```C++
-   String datosNMEA = "$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A";
-   Parse(datosNMEA);
- ```
+   ```C++
+     String datosNMEA = "$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A";
+     Parse(datosNMEA);
+   ```
  
 - **lat**
   Variable que devuelve el valor de tipo float correspondiente a la latitud
@@ -46,9 +46,9 @@ En este caso nuestro módulo gps está conectado en los pines 32 y 33, por lo qu
   
 - **lon**
   Variable que devuelve el valor de tipo float correspondiente a la longitud
-```C++
-  float longitud = gps.lon;
-```  
+  ```C++
+    float longitud = gps.lon;
+  ```  
   
 - **hora**
   Variable que devuelve el valor de tipo String correspondiente a la hora en formato HH:MM:SS
